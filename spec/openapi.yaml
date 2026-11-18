@@ -1,0 +1,24 @@
+openapi: 3.0.3
+info:
+  title: PostAir Weather API Spec
+  description: Especificação OpenAPI para a API da PostAir
+  version: 1.0.0
+servers:
+  - url: https://library-api.postmanlabs.com
+    description: Servidor de Desenvolvimento / Treinamento
+paths:
+  /status:
+    get:
+      summary: Health Check da API
+      description: Retorna o status de integridade do serviço.
+      responses:
+        '200':
+          description: Serviço online
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "ok"
