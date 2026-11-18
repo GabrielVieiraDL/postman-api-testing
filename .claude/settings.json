@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./docs/**)",
+      "Read(./collections/**)",
+      "Read(./environments/**)",
+      "Read(./spec/**)",
+      "Edit(./collections/**)",
+      "Edit(./environments/**)",
+      "Edit(./docs/**)",
+      "Edit(./spec/**)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(newman *)",
+      "Bash(npm *)"
+    ],
+    "deny": [
+      "Read(./.env*)",
+      "Read(./**/.env*)",
+      "Read(./**/secrets/**)",
+      "Bash(rm -rf *)",
+      "Bash(chmod 777 *)",
+      "Bash(git push --force*)"
+    ]
+  }
+}
